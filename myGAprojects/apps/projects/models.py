@@ -1,4 +1,6 @@
 from django.db import models
+import django_filters
+from django_filters.rest_framework import FilterSet
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
@@ -15,3 +17,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+class ProjectFilter(django_filters.FilterSet):
+    name = django_filters.CharFilter(lookup_expr='contains')
+
+    class Meta:
+        model = Project
+        fields = ['category']
+

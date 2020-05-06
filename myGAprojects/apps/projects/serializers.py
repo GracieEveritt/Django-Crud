@@ -6,4 +6,4 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ('id', 'name', 'category','description', 'url', 'image', 'created_at', 'updated_at')
-        # lookup_field = 'category'
+        lookup_field = 'category'
