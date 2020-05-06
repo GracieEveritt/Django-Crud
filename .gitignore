@@ -3,6 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.pyc
+*~
+/.vscode
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
+
 # C extensions
 *.so
 
